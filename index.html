@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hesap Koruma | Sosyal Medya Hesaplarınızı Kurtarıyoruz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    :root{
+      --bg:#040b14;
+      --bg2:#07111d;
+      --bg3:#0a1727;
+      --card:rgba(255,255,255,0.06);
+      --card-2:rgba(255,255,255,0.03);
+      --line:rgba(255,255,255,0.10);
+      --line-strong:rgba(255,255,255,0.16);
+      --primary:#7be7ff;
+      --primary-2:#00d4ff;
+      --primary-3:#41bfff;
+      --text:#f7fbff;
+      --muted:#9bb0c7;
+      --success:#22c55e;
+      --shadow-soft:0 14px 50px rgba(0,0,0,0.28);
+      --shadow-cyan:0 20px 70px rgba(0,212,255,0.16);
+      --radius-xl:28px;
+      --radius-2xl:34px;
+      --radius-3xl:40px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(0,212,255,0.16), transparent 25%),
+        radial-gradient(circle at 92% 10%, rgba(123,231,255,0.10), transparent 22%),
+        radial-gradient(circle at 50% 45%, rgba(24,92,160,0.12), transparent 35%),
+        linear-gradient(180deg, #030912 0%, #06111d 28%, #081525 58%, #091826 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(circle at center, black 42%, transparent 100%);
+      opacity: 0.22;
+      z-index: 0;
+    }
+
+    ::selection {
+      background: rgba(123,231,255,0.28);
+      color: white;
+    }
+
+    .title-font {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.04em;
+    }
+
+    .glass {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.095), rgba(255,255,255,0.045));
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow:
+        0 10px 40px rgba(0,0,0,0.30),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .glass-soft {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        0 8px 30px rgba(0,0,0,0.14);
+    }
+
+    .premium-border {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .premium-border::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: inherit;
+      background:
+        linear-gradient(135deg, rgba(123,231,255,0.75), rgba(255,255,255,0.12), rgba(0,212,255,0.26), rgba(255,255,255,0.08));
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .premium-border::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -40%;
+      width: 45%;
+      height: 140%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent);
+      transform: rotate(15deg);
+      transition: transform 0.9s ease;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .premium-border:hover::after {
+      opacity: 1;
+      transform: translateX(240%) rotate(15deg);
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.18));
+    }
+
+    .glow-text {
+      text-shadow:
+        0 0 18px rgba(123,231,255,0.22),
+        0 0 34px rgba(0,212,255,0.12);
+    }
+
+    .glow-box {
+      box-shadow:
+        0 0 0 1px rgba(123,231,255,0.10),
+        0 16px 44px rgba(0,0,0,0.34),
+        0 0 72px rgba(0,212,255,0.09);
+    }
+
+    .section-fade {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all 0.8s ease;
+    }
+
+    .section-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(90px);
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    .bg-noise::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.065) 0.8px, transparent 0.8px);
+      background-size: 18px 18px;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .btn-primary,
+    .btn-dark {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      will-change: transform, box-shadow;
+    }
+
+    .btn-primary::before,
+    .btn-dark::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.24), transparent);
+      transform: translateX(-120%);
+      transition: transform 0.8s ease;
+    }
+
+    .btn-primary:hover::before,
+    .btn-dark:hover::before {
+      transform: translateX(120%);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #9beeff 0%, #39dbff 32%, #00cfff 70%, #54c2ff 100%);
+      color: #03111d;
+      box-shadow:
+        0 12px 30px rgba(0,212,255,0.24),
+        inset 0 1px 0 rgba(255,255,255,0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow:
+        0 18px 38px rgba(0,212,255,0.34),
+        0 0 0 1px rgba(255,255,255,0.20);
+    }
+
+    .btn-dark {
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .btn-dark:hover {
+      background: rgba(255,255,255,0.09);
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      transition: all 0.28s ease;
+    }
+
+    .tag:hover {
+      border-color: rgba(123,231,255,0.24);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0,212,255,0.07);
+    }
+
+    .pricing-card {
+      transition: transform 0.38s ease, box-shadow 0.38s ease, border-color 0.38s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.28),
+        0 0 0 1px rgba(123,231,255,0.10);
+    }
+
+    .pricing-card.featured {
+      transform: translateY(-12px);
+      border-color: rgba(123,231,255,0.34);
+      box-shadow:
+        0 24px 70px rgba(0,212,255,0.14),
+        0 0 0 1px rgba(123,231,255,0.20);
+    }
+
+    .platform-icon {
+      transition: all 0.35s ease;
+    }
+
+    .platform-icon:hover {
+      transform: translateY(-8px) scale(1.03);
+      color: var(--primary);
+      opacity: 1 !important;
+      box-shadow: 0 16px 32px rgba(0,212,255,0.10);
+    }
+
+    .faq-item {
+      transition: border-color 0.28s ease, transform 0.28s ease, background 0.28s ease;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(123,231,255,0.16);
+    }
+
+    .faq-item[open] summary {
+      color: white;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary i {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .faq-item[open] summary i {
+      transform: rotate(45deg);
+      color: #7be7ff;
+    }
+
+    .badge-live {
+      box-shadow: 0 0 0 0 rgba(34,197,94,0.7);
+      animation: pulse-green 2s infinite;
+    }
+
+    .floating-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(123,231,255,0.8) 0%, rgba(123,231,255,0.08) 60%, transparent 100%);
+      animation: floatUp linear infinite;
+      opacity: 0.18;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(40px) translateX(0) scale(0.9);
+        opacity: 0;
+      }
+      15% { opacity: 0.18; }
+      85% { opacity: 0.18; }
+      100% {
+        transform: translateY(-420px) translateX(30px) scale(1.15);
+        opacity: 0;
+      }
+    }
+
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+      70% { box-shadow: 0 0 0 12px rgba(34,197,94,0); }
+      100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+    }
+
+    @keyframes floatY {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes softRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .soft-float {
+      animation: floatY 6s ease-in-out infinite;
+    }
+
+    .orbital-ring {
+      position: absolute;
+      inset: auto;
+      border-radius: 999px;
+      border: 1px solid rgba(123,231,255,0.14);
+      box-shadow: inset 0 0 20px rgba(123,231,255,0.02);
+      animation: softRotate 22s linear infinite;
+      pointer-events: none;
+    }
+
+    .soft-divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    }
+
+    .premium-panel {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.30),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .hero-stat {
+      transition: all 0.32s ease;
+    }
+
+    .hero-stat:hover {
+      transform: translateY(-4px);
+      border-color: rgba(123,231,255,0.18);
+      box-shadow: 0 16px 34px rgba(0,212,255,0.08);
+    }
+
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #7be7ff, #00d4ff, #67c8ff);
+      box-shadow: 0 0 18px rgba(0,212,255,0.34);
+      z-index: 99999;
+    }
+
+    @media (max-width: 1024px) {
+      .pricing-card.featured {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid {
+        background-size: 30px 30px;
+      }
+
+      .title-font {
+        letter-spacing: -0.045em;
+      }
+
+      .premium-border:hover::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="text-white overflow-x-hidden">
+  <div id="scrollProgress"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="sticky top-0 z-50 border-b border-white/10 bg-[#06111f]/78 backdrop-blur-2xl transition-all">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl flex items-center justify-center glass glow-box soft-float">
+          <i class="fa-solid fa-shield-halved text-xl text-[#7be7ff]"></i>
+        </div>
+        <div>
+          <h1 class="title-font text-2xl md:text-3xl font-bold tracking-tight">Hesap Koruma</h1>
+          <p class="text-[11px] uppercase tracking-[0.25em] text-cyan-200/70">Digital Account Recovery</p>
+        </div>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#hizmetler" class="hover:text-white transition">Hizmetler</a>
+        <a href="#nasil" class="hover:text-white transition">Süreç</a>
+        <a href="#fiyat" class="hover:text-white transition">Paketler</a>
+        <a href="#hikayeler" class="hover:text-white transition">Yorumlar</a>
+        <a href="#sss" class="hover:text-white transition">SSS</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/905551234567" target="_blank" class="hidden md:inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-green-500/90 hover:bg-green-500 text-white font-semibold transition shadow-[0_10px_30px_rgba(34,197,94,0.22)]">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          WhatsApp
+        </a>
+        <button onclick="showModal()" class="btn-primary px-6 py-3 rounded-2xl font-semibold transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-bolt"></i>
+          Ücretsiz Analiz
+        </button>
+        <button onclick="toggleMobileMenu()" class="lg:hidden w-11 h-11 rounded-xl glass flex items-center justify-center text-lg">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-[#08172a]/95 backdrop-blur-xl">
+      <div class="px-6 py-5 space-y-4 text-slate-300">
+        <a href="#hizmetler" class="block hover:text-white">Hizmetler</a>
+        <a href="#nasil" class="block hover:text-white">Süreç</a>
+        <a href="#fiyat" class="block hover:text-white">Paketler</a>
+        <a href="#hikayeler" class="block hover:text-white">Yorumlar</a>
+        <a href="#sss" class="block hover:text-white">SSS</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="relative overflow-hidden">
+    <div class="floating-particles" id="particles"></div>
+
+    <div class="hero-orb w-[380px] h-[380px] bg-cyan-400/20 top-[-80px] left-[-80px]"></div>
+    <div class="hero-orb w-[420px] h-[420px] bg-cyan-300/10 top-[60px] right-[-120px]"></div>
+    <div class="orbital-ring w-[360px] h-[360px] top-[110px] right-[10%]"></div>
+    <div class="orbital-ring w-[520px] h-[520px] top-[40px] right-[3%] opacity-40"></div>
+    <div class="absolute inset-0 hero-grid opacity-40"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-28">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div data-parallax="0.04">
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-soft text-sm text-cyan-100 mb-7">
+            <span class="w-2.5 h-2.5 rounded-full bg-green-400 badge-live"></span>
+            7/24 aktif analiz • çoklu platform desteği
+          </div>
+
+          <h1 class="title-font text-[3rem] md:text-[5.35rem] font-bold leading-[0.92] tracking-tight glow-text max-w-3xl">
+            Sosyal medya hesabınız
+            <span class="text-[#7be7ff]">kapandıysa</span>,
+            süreci profesyonelce yönetelim.
+          </h1>
+
+          <p class="mt-7 text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed">
+            Hack, spam, telif, yanlış kısıtlama ve erişim kaybı gibi durumlarda hesabınızın durumunu analiz ediyor,
+            doğru itiraz ve kurtarma akışını planlayıp süreci sizin adınıza profesyonelce yönetiyoruz.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">Instagram</div>
+            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">TikTok</div>
+            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">X</div>
+            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">LinkedIn</div>
+            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">YouTube</div>
+            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">WhatsApp</div>
+          </div>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <button onclick="showModal()" class="btn-primary px-8 py-4 rounded-2xl font-bold text-base md:text-lg transition inline-flex items-center justify-center gap-3">
+              <i class="fa-solid fa-shield-halved"></i>
+              Ücretsiz Risk Analizi Al
+            </button>
+            <a href="https://wa.me/905551234567" target="_blank" class="btn-dark px-8 py-4 rounded-2xl font-semibold text-base md:text-lg transition inline-flex items-center justify-center gap-3">
+              <i class="fa-brands fa-whatsapp text-green-400"></i>
+              WhatsApp’tan Yaz
+            </a>
+          </div>
+
+          <div class="mt-12 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl">
+            <div class="glass-soft rounded-2xl p-5 hero-stat">
+              <div id="counter1" class="text-3xl md:text-4xl font-bold text-[#7be7ff]">1247</div>
+              <div class="text-sm text-slate-400 mt-1">İncelenen Vaka</div>
+            </div>
+            <div class="glass-soft rounded-2xl p-5 hero-stat">
+              <div id="counter2" class="text-3xl md:text-4xl font-bold text-[#7be7ff]">72</div>
+              <div class="text-sm text-slate-400 mt-1">Saat Ort. Süre</div>
+            </div>
+            <div class="glass-soft rounded-2xl p-5 hero-stat">
+              <div id="counter3" class="text-3xl md:text-4xl font-bold text-[#7be7ff]">96</div>
+              <div class="text-sm text-slate-400 mt-1">Memnuniyet Skoru</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative" data-parallax="-0.05">
+          <div class="absolute -inset-4 bg-cyan-400/10 blur-3xl rounded-full"></div>
+          <div id="heroCard" class="relative glass premium-border rounded-[32px] p-6 md:p-8 glow-box bg-noise overflow-hidden">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.25em] text-cyan-200/60">Case Monitor</p>
+                  <h3 class="text-2xl font-bold mt-2">Hesap Durum Analizi</h3>
+                </div>
+                <div class="px-3 py-1.5 rounded-full bg-green-500/15 border border-green-400/20 text-green-300 text-xs font-semibold">
+                  ACTIVE
+                </div>
+              </div>
+
+              <div class="rounded-3xl bg-black/35 border border-white/10 p-6 premium-panel">
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center border border-cyan-300/20 shadow-[0_0_0_1px_rgba(123,231,255,0.08)]">
+                    <i class="fa-solid fa-lock text-2xl text-[#7be7ff]"></i>
+                  </div>
+                  <div>
+                    <p class="text-lg font-semibold">Profesyonel Kurtarma Süreci</p>
+                    <p class="text-sm text-slate-400">Durum tespiti • risk sınıfı • çözüm akışı</p>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-4 border border-white/8">
+                    <span class="text-slate-300">İlk durum kontrolü</span>
+                    <span class="text-cyan-300 font-semibold">Hazır</span>
+                  </div>
+                  <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-4 border border-white/8">
+                    <span class="text-slate-300">İtiraz / inceleme planı</span>
+                    <span class="text-cyan-300 font-semibold">Planlanıyor</span>
+                  </div>
+                  <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-4 border border-white/8">
+                    <span class="text-slate-300">Kalıcı koruma önerileri</span>
+                    <span class="text-cyan-300 font-semibold">Hazırlanıyor</span>
+                  </div>
+                </div>
+
+                <div class="mt-6 rounded-2xl bg-gradient-to-r from-cyan-400/15 to-transparent border border-cyan-300/15 p-4">
+                  <p class="text-sm text-slate-300">
+                    Her vaka aynı değildir. Önce hesabın türünü ve risk seviyesini analiz eder, ardından doğru çözüm yolunu belirleriz.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mt-6">
+                <div class="glass-soft rounded-2xl p-4">
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Platform</p>
+                  <p class="mt-2 font-semibold">Instagram / TikTok / X</p>
+                </div>
+                <div class="glass-soft rounded-2xl p-4">
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Destek</p>
+                  <p class="mt-2 font-semibold">WhatsApp + Süreç Takibi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <section class="border-y border-white/8 bg-white/[0.02]">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-400">
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Çoklu Platform Analizi</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Süreç Planlaması</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Kurumsal Görünüm</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Hızlı Ön Değerlendirme</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> 7/24 İletişim</span>
+    </div>
+  </section>
+
+  <!-- HİZMETLER -->
+  <section id="hizmetler" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-14">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">SERVICES</p>
+        <h2 class="title-font text-4xl md:text-5xl font-bold tracking-tight">Premium hizmet yapısı</h2>
+        <p class="text-slate-400 text-lg mt-5">
+          Vakanın durumuna göre analiz, kurtarma planı, itiraz süreci ve kalıcı güvenlik önerilerini tek yapı altında sunuyoruz.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-7">
+        <div class="glass rounded-[28px] p-8 premium-border hover:-translate-y-2 transition duration-300">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-6 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+            <i class="fa-solid fa-shield-halved text-2xl text-[#7be7ff]"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Önleyici Koruma Danışmanlığı</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Güvenlik açıkları, şifre politikası, iki aşamalı doğrulama, erişim kontrolleri ve hesap yapısına özel koruma önerileri.
+          </p>
+        </div>
+
+        <div class="glass rounded-[28px] p-8 premium-border hover:-translate-y-2 transition duration-300 border border-cyan-300/20 shadow-[0_20px_60px_rgba(0,212,255,0.09)]">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-6 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+            <i class="fa-solid fa-rotate-left text-2xl text-[#7be7ff]"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Hesap Kurtarma Süreci</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Hack, erişim kaybı, spam, telif ve yanlış kısıtlama durumlarında profesyonel analiz ve doğru itiraz akışı planlaması.
+          </p>
+        </div>
+
+        <div class="glass rounded-[28px] p-8 premium-border hover:-translate-y-2 transition duration-300">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-6 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+            <i class="fa-solid fa-scale-balanced text-2xl text-[#7be7ff]"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Resmî Süreç Yönlendirmesi</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Gerekli durumlarda dilekçe, itiraz metni ve süreç yönetimi için profesyonel yönlendirme ve destek planı.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NASIL ÇALIŞIR -->
+  <section id="nasil" class="py-24 bg-white/[0.02] border-y border-white/8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">PROCESS</p>
+        <h2 class="title-font text-4xl md:text-5xl font-bold">3 aşamalı profesyonel süreç</h2>
+        <p class="text-slate-400 text-lg mt-5">
+          Karmaşık görünen hesabı kapatma veya erişim sorunlarını anlaşılır bir süreç haline getiriyoruz.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="section-fade glass rounded-[28px] p-8 text-center premium-border">
+          <div class="w-20 h-20 mx-auto rounded-[24px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-4xl font-extrabold shadow-lg">1</div>
+          <h4 class="text-2xl mt-7 font-bold">Durum Analizi</h4>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Hesabın platformu, problemi ve mevcut risk durumu değerlendirilir. En uygun yol haritası belirlenir.
+          </p>
+        </div>
+
+        <div class="section-fade glass rounded-[28px] p-8 text-center premium-border">
+          <div class="w-20 h-20 mx-auto rounded-[24px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-4xl font-extrabold shadow-lg">2</div>
+          <h4 class="text-2xl mt-7 font-bold">Süreç Yönetimi</h4>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            İtiraz, doğrulama ve kurtarma için gerekli adımlar planlanır; sürecin takibi düzenli şekilde yapılır.
+          </p>
+        </div>
+
+        <div class="section-fade glass rounded-[28px] p-8 text-center premium-border">
+          <div class="w-20 h-20 mx-auto rounded-[24px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-4xl font-extrabold shadow-lg">3</div>
+          <h4 class="text-2xl mt-7 font-bold">Kalıcı Güvenlik</h4>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Süreç sonrası hesabın yeniden risk yaşamaması için koruma önerileri ve güvenlik düzeni oluşturulur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FİYAT -->
+  <section id="fiyat" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
+        <div class="max-w-2xl">
+          <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">PRICING</p>
+          <h2 class="title-font text-4xl md:text-5xl font-bold">Premium paket yapısı</h2>
+          <p class="text-slate-400 text-lg mt-5">
+            Farklı ihtiyaç seviyelerine göre net ve premium paketleme yapısı.
+          </p>
+        </div>
+
+        <div class="inline-flex items-center bg-white/5 border border-white/10 rounded-full p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+          <button onclick="setPricing(false)" id="monthlyBtn" class="px-6 md:px-8 py-3 rounded-full font-semibold bg-white text-[#07121f] transition">Aylık</button>
+          <button onclick="setPricing(true)" id="yearlyBtn" class="px-6 md:px-8 py-3 rounded-full font-semibold text-white/80 transition">Yıllık %20</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-7" id="pricingCards"></div>
+    </div>
+  </section>
+
+  <!-- YORUMLAR -->
+  <section id="hikayeler" class="py-24 bg-white/[0.02] border-y border-white/8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">REVIEWS</p>
+        <h2 class="title-font text-4xl md:text-5xl font-bold">Müşteri deneyimleri</h2>
+        <p class="text-slate-400 text-lg mt-5">
+          Süreç yaklaşımımızı en iyi anlatan şey, kullanıcı deneyimidir.
+        </p>
+      </div>
+
+      <div id="testimonialCarousel" class="relative overflow-hidden">
+        <div id="slides" class="flex transition-transform duration-700 ease-in-out"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM -->
+  <section id="platformlar" class="py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">PLATFORMS</p>
+      <h2 class="title-font text-4xl md:text-5xl font-bold mb-5">Desteklenen platformlar</h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-14">
+        Farklı platformlardaki hesap problemlerine uygun süreç planlaması.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-5">
+        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-instagram text-4xl"></i></div>
+        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-facebook text-4xl"></i></div>
+        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-tiktok text-4xl"></i></div>
+        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-x-twitter text-4xl"></i></div>
+        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-linkedin text-4xl"></i></div>
+        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-youtube text-4xl"></i></div>
+        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-whatsapp text-4xl"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="sss" class="py-24 bg-white/[0.02] border-y border-white/8">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">FAQ</p>
+        <h2 class="title-font text-4xl md:text-5xl font-bold">Sık sorulan sorular</h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="faq-item glass rounded-3xl p-6">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-lg">
+            Hangi platformlarda destek veriyorsunuz?
+            <i class="fa-solid fa-plus text-cyan-300"></i>
+          </summary>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Instagram, TikTok, X, LinkedIn, YouTube ve WhatsApp dahil çoklu platform senaryolarında ön değerlendirme ve süreç planlaması yapıyoruz.
+          </p>
+        </details>
+
+        <details class="faq-item glass rounded-3xl p-6">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-lg">
+            Süreç neye göre değişiyor?
+            <i class="fa-solid fa-plus text-cyan-300"></i>
+          </summary>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Sorunun türü, platform, hesabın durumu ve doğrulama seviyesi gibi faktörler sürecin uzunluğunu ve yöntemini belirler.
+          </p>
+        </details>
+
+        <details class="faq-item glass rounded-3xl p-6">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-lg">
+            İlk aşamada ne yapmam gerekiyor?
+            <i class="fa-solid fa-plus text-cyan-300"></i>
+          </summary>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Öncelikle hesap türünüzü ve yaşadığınız problemi paylaşmanız yeterli. Ardından size uygun ilk analiz ve yönlendirme yapılır.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="relative glass rounded-[36px] p-10 md:p-14 premium-border overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-48 h-48 bg-cyan-400/10 blur-3xl rounded-full"></div>
+        <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-cyan-400/10 blur-3xl rounded-full"></div>
+
+        <div class="relative flex flex-col lg:flex-row gap-8 lg:items-center lg:justify-between">
+          <div class="max-w-2xl">
+            <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">GET STARTED</p>
+            <h3 class="title-font text-3xl md:text-5xl font-bold leading-tight">
+              Hesabınız için profesyonel bir ön analiz alın.
+            </h3>
+            <p class="text-slate-400 text-lg mt-5">
+              Kısa bir ön değerlendirme ile size en doğru yol haritasını çıkaralım.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button onclick="showModal()" class="btn-primary px-8 py-4 rounded-2xl font-bold transition inline-flex items-center justify-center gap-3">
+              <i class="fa-solid fa-rocket"></i>
+              Analizi Başlat
+            </button>
+            <a href="https://wa.me/905551234567" target="_blank" class="btn-dark px-8 py-4 rounded-2xl font-semibold transition inline-flex items-center justify-center gap-3">
+              <i class="fa-brands fa-whatsapp text-green-400"></i>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/8 bg-black/30">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center shadow-[0_12px_30px_rgba(0,212,255,0.10)]">
+              <i class="fa-solid fa-shield-halved text-xl text-[#7be7ff]"></i>
+            </div>
+            <div>
+              <h4 class="title-font text-2xl font-bold">Hesap Koruma</h4>
+              <p class="text-xs uppercase tracking-[0.25em] text-cyan-200/60">Premium Digital Protection</p>
+            </div>
+          </div>
+          <p class="text-slate-400 max-w-xl leading-relaxed">
+            Sosyal medya hesap güvenliği, ön değerlendirme, kurtarma planlaması ve süreç yönetimi için premium görünümde profesyonel hizmet sunumu.
+          </p>
+        </div>
+
+        <div class="text-slate-500 text-sm md:text-right">
+          <p>© 2026 Hesap Koruma</p>
+          <p class="mt-2">www.hesapkoruma.com</p>
+          <p class="mt-2">KVKK uyumlu yapı • Tüm hakları saklıdır</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="hidden fixed inset-0 bg-black/75 backdrop-blur-sm items-center justify-center z-[9999] px-4">
+    <div class="glass premium-border max-w-lg w-full rounded-[32px] p-8 md:p-10">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-3">FREE ANALYSIS</p>
+          <h3 class="text-3xl font-bold">Ücretsiz Hesap Analizi</h3>
+        </div>
+        <button onclick="hideModal()" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <p class="text-slate-400 mt-4">
+        Kısa bilgilerinizi bırakın, durumunuza uygun ilk değerlendirmeyi oluşturalım.
+      </p>
+
+      <form onsubmit="submitForm(event)" class="space-y-4 mt-8">
+        <input type="text" placeholder="Ad Soyad" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500">
+        <input type="email" placeholder="E-posta" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500">
+        <select class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white">
+          <option class="text-black">Instagram</option>
+          <option class="text-black">TikTok</option>
+          <option class="text-black">X (Twitter)</option>
+          <option class="text-black">LinkedIn</option>
+          <option class="text-black">YouTube</option>
+          <option class="text-black">Diğer</option>
+        </select>
+        <textarea rows="4" placeholder="Kısaca yaşadığınız problemi yazın" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500 resize-none"></textarea>
+
+        <button type="submit" class="w-full btn-primary py-4 rounded-2xl font-bold transition">
+          Analizi Başlat
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    function showModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function hideModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      alert('✅ Talebiniz alındı. En kısa sürede sizinle iletişime geçeceğiz.');
+      hideModal();
+    }
+
+    function animateCounter(id, target, duration = 1800) {
+      const el = document.getElementById(id);
+      let start = 0;
+      const step = Math.max(1, Math.floor(target / (duration / 16)));
+
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) {
+          el.textContent = target;
+          clearInterval(timer);
+        } else {
+          el.textContent = start;
+        }
+      }, 16);
+    }
+
+    let isYearly = false;
+
+    const plans = [
+      {
+        name: "Starter",
+        monthly: 1490,
+        yearly: 14304,
+        badge: "Bireysel",
+        features: [
+          "Ön değerlendirme",
+          "Temel süreç yönlendirmesi",
+          "WhatsApp iletişim",
+          "Koruma önerileri"
+        ]
+      },
+      {
+        name: "Professional",
+        monthly: 3490,
+        yearly: 33504,
+        badge: "En çok tercih edilen",
+        featured: true,
+        features: [
+          "Detaylı vaka analizi",
+          "Öncelikli süreç planlaması",
+          "Çoklu kontrol adımı",
+          "Daha kapsamlı destek akışı"
+        ]
+      },
+      {
+        name: "Corporate",
+        monthly: 7490,
+        yearly: 71904,
+        badge: "Kurumsal",
+        features: [
+          "Kurumsal seviye yapı",
+          "Geniş kapsamlı değerlendirme",
+          "Süreç takibi",
+          "Gelişmiş koruma yaklaşımı"
+        ]
+      }
+    ];
+
+    function formatPrice(price) {
+      return new Intl.NumberFormat('tr-TR').format(price);
+    }
+
+    function renderPricing() {
+      const container = document.getElementById('pricingCards');
+      container.innerHTML = '';
+
+      plans.forEach(plan => {
+        const price = isYearly ? plan.yearly : plan.monthly;
+
+        const card = document.createElement('div');
+        card.className = `
+          pricing-card glass rounded-[32px] p-8 premium-border relative overflow-hidden
+          ${plan.featured ? 'featured' : ''}
+        `;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-4 mb-8">
+            <div>
+              <div class="inline-flex px-3 py-1 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-cyan-200 mb-4">
+                ${plan.badge}
+              </div>
+              <h3 class="text-2xl font-bold">${plan.name}</h3>
+            </div>
+            ${plan.featured ? `
+              <div class="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-300/25 flex items-center justify-center shadow-[0_12px_26px_rgba(0,212,255,0.10)]">
+                <i class="fa-solid fa-crown text-[#7be7ff]"></i>
+              </div>` : ''}
+          </div>
+
+          <div class="mb-8">
+            <div class="text-5xl md:text-6xl font-bold text-white tracking-tight">
+              ${formatPrice(price)} <span class="text-xl text-slate-400 font-medium">₺</span>
+            </div>
+            <p class="text-slate-400 mt-2">${isYearly ? 'yıllık ödeme' : 'aylık ödeme'}</p>
+          </div>
+
+          <div class="space-y-4 mb-8">
+            ${plan.features.map(feature => `
+              <div class="flex items-center gap-3 text-slate-300">
+                <i class="fa-solid fa-check text-cyan-300"></i>
+                <span>${feature}</span>
+              </div>
+            `).join('')}
+          </div>
+
+          <button onclick="showModal()" class="${plan.featured ? 'btn-primary text-[#06111f]' : 'btn-dark text-white'} w-full py-4 rounded-2xl font-bold transition">
+            Teklif Al
+          </button>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function setPricing(yearly) {
+      isYearly = yearly;
+
+      const monthlyBtn = document.getElementById('monthlyBtn');
+      const yearlyBtn = document.getElementById('yearlyBtn');
+
+      if (isYearly) {
+        yearlyBtn.classList.add('bg-white', 'text-[#07121f]');
+        yearlyBtn.classList.remove('text-white/80');
+        monthlyBtn.classList.remove('bg-white', 'text-[#07121f]');
+        monthlyBtn.classList.add('text-white/80');
+      } else {
+        monthlyBtn.classList.add('bg-white', 'text-[#07121f]');
+        monthlyBtn.classList.remove('text-white/80');
+        yearlyBtn.classList.remove('bg-white', 'text-[#07121f]');
+        yearlyBtn.classList.add('text-white/80');
+      }
+
+      renderPricing();
+    }
+
+    const testimonials = [
+      {
+        name: "Eda Öztürk",
+        role: "Instagram hesabı sahibi",
+        text: "Süreç çok daha düzenli ve profesyonel ilerledi. Ne yapmam gerektiğini net şekilde öğrendim.",
+        platform: "Instagram"
+      },
+      {
+        name: "Kadir Yılmaz",
+        role: "İçerik üreticisi",
+        text: "Karmaşık görünen süreci sadeleştirdiler. İletişim tarafı çok hızlı ve güven vericiydi.",
+        platform: "X"
+      },
+      {
+        name: "ABC Şirketi",
+        role: "Kurumsal marka",
+        text: "Kurumsal hesap problemimiz için planlı ve net bir yol haritası sunuldu. Oldukça profesyoneldi.",
+        platform: "LinkedIn"
+      }
+    ];
+
+    function renderTestimonials() {
+      const container = document.getElementById('slides');
+      container.innerHTML = testimonials.map(t => `
+        <div class="min-w-full px-1">
+          <div class="glass rounded-[32px] p-8 md:p-10 premium-border">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+                <i class="fa-solid fa-user-shield text-[#7be7ff]"></i>
+              </div>
+              <div>
+                <p class="font-bold text-lg">${t.name}</p>
+                <p class="text-sm text-slate-400">${t.role} • ${t.platform}</p>
+              </div>
+            </div>
+            <p class="text-xl md:text-2xl leading-relaxed text-slate-100">
+              “${t.text}”
+            </p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    let currentSlide = 0;
+    function startCarousel() {
+      const slidesContainer = document.getElementById('slides');
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % testimonials.length;
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }, 4500);
+    }
+
+    function observeSections() {
+      const sections = document.querySelectorAll('.section-fade');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.18 });
+
+      sections.forEach(sec => observer.observe(sec));
+    }
+
+    function updateScrollProgress() {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    }
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      const count = 18;
+
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('span');
+        p.className = 'particle';
+        const size = Math.random() * 10 + 4;
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.bottom = `${Math.random() * 18}%`;
+        p.style.animationDuration = `${10 + Math.random() * 14}s`;
+        p.style.animationDelay = `${Math.random() * 12}s`;
+        container.appendChild(p);
+      }
+    }
+
+    function heroTilt() {
+      const card = document.getElementById('heroCard');
+      if (!card) return;
+
+      card.addEventListener('mousemove', (e) => {
+        if (window.innerWidth < 1024) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotateY = ((x / rect.width) - 0.5) * 8;
+        const rotateX = ((y / rect.height) - 0.5) * -8;
+
+        card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg)';
+      });
+    }
+
+    function navbarShadow() {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 40) {
+        nav.classList.add('shadow-2xl');
+      } else {
+        nav.classList.remove('shadow-2xl');
+      }
+    }
+
+    window.onload = function () {
+      animateCounter('counter1', 1247);
+      animateCounter('counter2', 72);
+      animateCounter('counter3', 96);
+
+      renderPricing();
+      renderTestimonials();
+      startCarousel();
+      observeSections();
+      createParticles();
+      heroTilt();
+      updateScrollProgress();
+      navbarShadow();
+
+      window.addEventListener('scroll', () => {
+        updateScrollProgress();
+        navbarShadow();
+      });
+    };
+  </script>
+</body>
+</html>
