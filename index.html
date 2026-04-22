@@ -406,7 +406,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 3px;
+      height: 2px;
       width: 0%;
       background: linear-gradient(90deg, #7be7ff, #00d4ff, #67c8ff);
       box-shadow: 0 0 18px rgba(0,212,255,0.34);
@@ -439,18 +439,18 @@
 
   <!-- NAVBAR -->
   <nav id="navbar" class="sticky top-0 z-50 border-b border-white/10 bg-[#06111f]/78 backdrop-blur-2xl transition-all">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-2xl flex items-center justify-center glass glow-box soft-float">
-          <i class="fa-solid fa-shield-halved text-xl text-[#7be7ff]"></i>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center glass glow-box soft-float">
+          <i class="fa-solid fa-shield-halved text-base text-[#7be7ff]"></i>
         </div>
         <div>
-          <h1 class="title-font text-2xl md:text-3xl font-bold tracking-tight">Hesap Koruma</h1>
-          <p class="text-[11px] uppercase tracking-[0.25em] text-cyan-200/70">Digital Account Recovery</p>
+          <h1 class="title-font text-xl font-bold tracking-tight">Hesap Koruma</h1>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-cyan-200/60">Digital Account Recovery</p>
         </div>
       </div>
 
-      <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
         <a href="#hizmetler" class="hover:text-white transition">Hizmetler</a>
         <a href="#nasil" class="hover:text-white transition">Süreç</a>
         <a href="#fiyat" class="hover:text-white transition">Paketler</a>
@@ -458,23 +458,23 @@
         <a href="#sss" class="hover:text-white transition">SSS</a>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a href="https://wa.me/905551234567" target="_blank" class="hidden md:inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-green-500/90 hover:bg-green-500 text-white font-semibold transition shadow-[0_10px_30px_rgba(34,197,94,0.22)]">
-          <i class="fa-brands fa-whatsapp text-lg"></i>
+      <div class="flex items-center gap-2.5">
+        <a href="https://wa.me/905551234567" target="_blank" class="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-green-500/90 hover:bg-green-500 text-white text-sm font-semibold transition shadow-[0_10px_30px_rgba(34,197,94,0.22)]">
+          <i class="fa-brands fa-whatsapp text-base"></i>
           WhatsApp
         </a>
-        <button onclick="showModal()" class="btn-primary px-6 py-3 rounded-2xl font-semibold transition inline-flex items-center gap-2">
-          <i class="fa-solid fa-bolt"></i>
+        <button onclick="showModal()" class="btn-primary px-5 py-2.5 rounded-xl text-sm font-semibold transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-bolt text-xs"></i>
           Ücretsiz Analiz
         </button>
-        <button onclick="toggleMobileMenu()" class="lg:hidden w-11 h-11 rounded-xl glass flex items-center justify-center text-lg">
-          <i class="fa-solid fa-bars"></i>
+        <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-xl glass flex items-center justify-center">
+          <i class="fa-solid fa-bars text-sm"></i>
         </button>
       </div>
     </div>
 
     <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-[#08172a]/95 backdrop-blur-xl">
-      <div class="px-6 py-5 space-y-4 text-slate-300">
+      <div class="px-6 py-4 space-y-3 text-slate-300 text-sm">
         <a href="#hizmetler" class="block hover:text-white">Hizmetler</a>
         <a href="#nasil" class="block hover:text-white">Süreç</a>
         <a href="#fiyat" class="block hover:text-white">Paketler</a>
@@ -488,122 +488,122 @@
   <header class="relative overflow-hidden">
     <div class="floating-particles" id="particles"></div>
 
-    <div class="hero-orb w-[380px] h-[380px] bg-cyan-400/20 top-[-80px] left-[-80px]"></div>
-    <div class="hero-orb w-[420px] h-[420px] bg-cyan-300/10 top-[60px] right-[-120px]"></div>
-    <div class="orbital-ring w-[360px] h-[360px] top-[110px] right-[10%]"></div>
-    <div class="orbital-ring w-[520px] h-[520px] top-[40px] right-[3%] opacity-40"></div>
+    <div class="hero-orb w-[320px] h-[320px] bg-cyan-400/20 top-[-60px] left-[-60px]"></div>
+    <div class="hero-orb w-[360px] h-[360px] bg-cyan-300/10 top-[50px] right-[-100px]"></div>
+    <div class="orbital-ring w-[300px] h-[300px] top-[100px] right-[10%]"></div>
+    <div class="orbital-ring w-[440px] h-[440px] top-[30px] right-[3%] opacity-40"></div>
     <div class="absolute inset-0 hero-grid opacity-40"></div>
 
-    <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-28">
-      <div class="grid lg:grid-cols-2 gap-14 items-center">
+    <div class="relative max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-22 md:pb-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div data-parallax="0.04">
-          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-soft text-sm text-cyan-100 mb-7">
-            <span class="w-2.5 h-2.5 rounded-full bg-green-400 badge-live"></span>
-            7/24 aktif analiz • çoklu platform desteği
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full glass-soft text-xs text-cyan-100 mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-400 badge-live"></span>
+            7/24 aktif analiz · çoklu platform desteği
           </div>
 
-          <h1 class="title-font text-[3rem] md:text-[5.35rem] font-bold leading-[0.92] tracking-tight glow-text max-w-3xl">
+          <h1 class="title-font text-[2.4rem] md:text-[3.9rem] font-bold leading-[0.93] tracking-tight glow-text max-w-2xl">
             Sosyal medya hesabınız
             <span class="text-[#7be7ff]">kapandıysa</span>,
             süreci profesyonelce yönetelim.
           </h1>
 
-          <p class="mt-7 text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed">
+          <p class="mt-6 text-base md:text-[1.05rem] text-slate-300 max-w-xl leading-relaxed">
             Hack, spam, telif, yanlış kısıtlama ve erişim kaybı gibi durumlarda hesabınızın durumunu analiz ediyor,
             doğru itiraz ve kurtarma akışını planlayıp süreci sizin adınıza profesyonelce yönetiyoruz.
           </p>
 
-          <div class="mt-8 flex flex-wrap gap-3">
-            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">Instagram</div>
-            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">TikTok</div>
-            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">X</div>
-            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">LinkedIn</div>
-            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">YouTube</div>
-            <div class="tag px-4 py-2 rounded-full text-sm text-slate-200">WhatsApp</div>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <div class="tag px-3.5 py-1.5 rounded-full text-xs text-slate-200 font-medium">Instagram</div>
+            <div class="tag px-3.5 py-1.5 rounded-full text-xs text-slate-200 font-medium">TikTok</div>
+            <div class="tag px-3.5 py-1.5 rounded-full text-xs text-slate-200 font-medium">X</div>
+            <div class="tag px-3.5 py-1.5 rounded-full text-xs text-slate-200 font-medium">LinkedIn</div>
+            <div class="tag px-3.5 py-1.5 rounded-full text-xs text-slate-200 font-medium">YouTube</div>
+            <div class="tag px-3.5 py-1.5 rounded-full text-xs text-slate-200 font-medium">WhatsApp</div>
           </div>
 
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <button onclick="showModal()" class="btn-primary px-8 py-4 rounded-2xl font-bold text-base md:text-lg transition inline-flex items-center justify-center gap-3">
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <button onclick="showModal()" class="btn-primary px-7 py-3.5 rounded-xl font-bold text-sm md:text-base transition inline-flex items-center justify-center gap-2.5">
               <i class="fa-solid fa-shield-halved"></i>
               Ücretsiz Risk Analizi Al
             </button>
-            <a href="https://wa.me/905551234567" target="_blank" class="btn-dark px-8 py-4 rounded-2xl font-semibold text-base md:text-lg transition inline-flex items-center justify-center gap-3">
+            <a href="https://wa.me/905551234567" target="_blank" class="btn-dark px-7 py-3.5 rounded-xl font-semibold text-sm md:text-base transition inline-flex items-center justify-center gap-2.5">
               <i class="fa-brands fa-whatsapp text-green-400"></i>
-              WhatsApp’tan Yaz
+              WhatsApp'tan Yaz
             </a>
           </div>
 
-          <div class="mt-12 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl">
-            <div class="glass-soft rounded-2xl p-5 hero-stat">
-              <div id="counter1" class="text-3xl md:text-4xl font-bold text-[#7be7ff]">1247</div>
-              <div class="text-sm text-slate-400 mt-1">İncelenen Vaka</div>
+          <div class="mt-10 grid grid-cols-3 gap-3 md:gap-5 max-w-lg">
+            <div class="glass-soft rounded-2xl p-4 hero-stat">
+              <div id="counter1" class="text-2xl md:text-3xl font-bold text-[#7be7ff]">1247</div>
+              <div class="text-xs text-slate-400 mt-1">İncelenen Vaka</div>
             </div>
-            <div class="glass-soft rounded-2xl p-5 hero-stat">
-              <div id="counter2" class="text-3xl md:text-4xl font-bold text-[#7be7ff]">72</div>
-              <div class="text-sm text-slate-400 mt-1">Saat Ort. Süre</div>
+            <div class="glass-soft rounded-2xl p-4 hero-stat">
+              <div id="counter2" class="text-2xl md:text-3xl font-bold text-[#7be7ff]">72</div>
+              <div class="text-xs text-slate-400 mt-1">Saat Ort. Süre</div>
             </div>
-            <div class="glass-soft rounded-2xl p-5 hero-stat">
-              <div id="counter3" class="text-3xl md:text-4xl font-bold text-[#7be7ff]">96</div>
-              <div class="text-sm text-slate-400 mt-1">Memnuniyet Skoru</div>
+            <div class="glass-soft rounded-2xl p-4 hero-stat">
+              <div id="counter3" class="text-2xl md:text-3xl font-bold text-[#7be7ff]">96</div>
+              <div class="text-xs text-slate-400 mt-1">Memnuniyet Skoru</div>
             </div>
           </div>
         </div>
 
         <div class="relative" data-parallax="-0.05">
           <div class="absolute -inset-4 bg-cyan-400/10 blur-3xl rounded-full"></div>
-          <div id="heroCard" class="relative glass premium-border rounded-[32px] p-6 md:p-8 glow-box bg-noise overflow-hidden">
+          <div id="heroCard" class="relative glass premium-border rounded-[28px] p-5 md:p-7 glow-box bg-noise overflow-hidden">
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center justify-between mb-5">
                 <div>
-                  <p class="text-sm uppercase tracking-[0.25em] text-cyan-200/60">Case Monitor</p>
-                  <h3 class="text-2xl font-bold mt-2">Hesap Durum Analizi</h3>
+                  <p class="text-[10px] uppercase tracking-[0.25em] text-cyan-200/60">Case Monitor</p>
+                  <h3 class="text-xl font-bold mt-1.5">Hesap Durum Analizi</h3>
                 </div>
-                <div class="px-3 py-1.5 rounded-full bg-green-500/15 border border-green-400/20 text-green-300 text-xs font-semibold">
+                <div class="px-3 py-1 rounded-full bg-green-500/15 border border-green-400/20 text-green-300 text-[11px] font-semibold">
                   ACTIVE
                 </div>
               </div>
 
-              <div class="rounded-3xl bg-black/35 border border-white/10 p-6 premium-panel">
-                <div class="flex items-center gap-4 mb-6">
-                  <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center border border-cyan-300/20 shadow-[0_0_0_1px_rgba(123,231,255,0.08)]">
-                    <i class="fa-solid fa-lock text-2xl text-[#7be7ff]"></i>
+              <div class="rounded-2xl bg-black/35 border border-white/10 p-5 premium-panel">
+                <div class="flex items-center gap-3.5 mb-5">
+                  <div class="w-12 h-12 rounded-xl bg-cyan-400/10 flex items-center justify-center border border-cyan-300/20 shadow-[0_0_0_1px_rgba(123,231,255,0.08)]">
+                    <i class="fa-solid fa-lock text-xl text-[#7be7ff]"></i>
                   </div>
                   <div>
-                    <p class="text-lg font-semibold">Profesyonel Kurtarma Süreci</p>
-                    <p class="text-sm text-slate-400">Durum tespiti • risk sınıfı • çözüm akışı</p>
+                    <p class="text-base font-semibold">Profesyonel Kurtarma Süreci</p>
+                    <p class="text-xs text-slate-400 mt-0.5">Durum tespiti · risk sınıfı · çözüm akışı</p>
                   </div>
                 </div>
 
-                <div class="space-y-4">
-                  <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-4 border border-white/8">
-                    <span class="text-slate-300">İlk durum kontrolü</span>
-                    <span class="text-cyan-300 font-semibold">Hazır</span>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3 border border-white/8">
+                    <span class="text-sm text-slate-300">İlk durum kontrolü</span>
+                    <span class="text-sm text-cyan-300 font-semibold">Hazır</span>
                   </div>
-                  <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-4 border border-white/8">
-                    <span class="text-slate-300">İtiraz / inceleme planı</span>
-                    <span class="text-cyan-300 font-semibold">Planlanıyor</span>
+                  <div class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3 border border-white/8">
+                    <span class="text-sm text-slate-300">İtiraz / inceleme planı</span>
+                    <span class="text-sm text-cyan-300 font-semibold">Planlanıyor</span>
                   </div>
-                  <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-4 border border-white/8">
-                    <span class="text-slate-300">Kalıcı koruma önerileri</span>
-                    <span class="text-cyan-300 font-semibold">Hazırlanıyor</span>
+                  <div class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3 border border-white/8">
+                    <span class="text-sm text-slate-300">Kalıcı koruma önerileri</span>
+                    <span class="text-sm text-cyan-300 font-semibold">Hazırlanıyor</span>
                   </div>
                 </div>
 
-                <div class="mt-6 rounded-2xl bg-gradient-to-r from-cyan-400/15 to-transparent border border-cyan-300/15 p-4">
-                  <p class="text-sm text-slate-300">
+                <div class="mt-5 rounded-xl bg-gradient-to-r from-cyan-400/15 to-transparent border border-cyan-300/15 p-3.5">
+                  <p class="text-xs text-slate-300 leading-relaxed">
                     Her vaka aynı değildir. Önce hesabın türünü ve risk seviyesini analiz eder, ardından doğru çözüm yolunu belirleriz.
                   </p>
                 </div>
               </div>
 
-              <div class="grid grid-cols-2 gap-4 mt-6">
-                <div class="glass-soft rounded-2xl p-4">
-                  <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Platform</p>
-                  <p class="mt-2 font-semibold">Instagram / TikTok / X</p>
+              <div class="grid grid-cols-2 gap-3 mt-5">
+                <div class="glass-soft rounded-xl p-3.5">
+                  <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500">Platform</p>
+                  <p class="mt-1.5 text-sm font-semibold">Instagram / TikTok / X</p>
                 </div>
-                <div class="glass-soft rounded-2xl p-4">
-                  <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Destek</p>
-                  <p class="mt-2 font-semibold">WhatsApp + Süreç Takibi</p>
+                <div class="glass-soft rounded-xl p-3.5">
+                  <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500">Destek</p>
+                  <p class="mt-1.5 text-sm font-semibold">WhatsApp + Süreç Takibi</p>
                 </div>
               </div>
             </div>
@@ -615,53 +615,53 @@
 
   <!-- TRUST BAR -->
   <section class="border-y border-white/8 bg-white/[0.02]">
-    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-400">
-      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Çoklu Platform Analizi</span>
-      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Süreç Planlaması</span>
-      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Kurumsal Görünüm</span>
-      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Hızlı Ön Değerlendirme</span>
-      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> 7/24 İletişim</span>
+    <div class="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-center gap-x-7 gap-y-2.5 text-xs text-slate-400">
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Çoklu Platform Analizi</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Süreç Planlaması</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Kurumsal Görünüm</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Hızlı Ön Değerlendirme</span>
+      <span class="inline-flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> 7/24 İletişim</span>
     </div>
   </section>
 
   <!-- HİZMETLER -->
-  <section id="hizmetler" class="py-24">
+  <section id="hizmetler" class="py-20">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="max-w-3xl mb-14">
-        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">SERVICES</p>
-        <h2 class="title-font text-4xl md:text-5xl font-bold tracking-tight">Premium hizmet yapısı</h2>
-        <p class="text-slate-400 text-lg mt-5">
+      <div class="max-w-2xl mb-12">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">SERVICES</p>
+        <h2 class="title-font text-3xl md:text-4xl font-bold tracking-tight">Premium hizmet yapısı</h2>
+        <p class="text-slate-400 text-base mt-4 leading-relaxed">
           Vakanın durumuna göre analiz, kurtarma planı, itiraz süreci ve kalıcı güvenlik önerilerini tek yapı altında sunuyoruz.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-7">
-        <div class="glass rounded-[28px] p-8 premium-border hover:-translate-y-2 transition duration-300">
-          <div class="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-6 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
-            <i class="fa-solid fa-shield-halved text-2xl text-[#7be7ff]"></i>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-[24px] p-7 premium-border hover:-translate-y-2 transition duration-300">
+          <div class="w-13 h-13 w-14 h-14 rounded-xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-5 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+            <i class="fa-solid fa-shield-halved text-xl text-[#7be7ff]"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-3">Önleyici Koruma Danışmanlığı</h3>
-          <p class="text-slate-400 leading-relaxed">
+          <h3 class="text-xl font-bold mb-2.5">Önleyici Koruma Danışmanlığı</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
             Güvenlik açıkları, şifre politikası, iki aşamalı doğrulama, erişim kontrolleri ve hesap yapısına özel koruma önerileri.
           </p>
         </div>
 
-        <div class="glass rounded-[28px] p-8 premium-border hover:-translate-y-2 transition duration-300 border border-cyan-300/20 shadow-[0_20px_60px_rgba(0,212,255,0.09)]">
-          <div class="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-6 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
-            <i class="fa-solid fa-rotate-left text-2xl text-[#7be7ff]"></i>
+        <div class="glass rounded-[24px] p-7 premium-border hover:-translate-y-2 transition duration-300 border border-cyan-300/20 shadow-[0_20px_60px_rgba(0,212,255,0.09)]">
+          <div class="w-14 h-14 rounded-xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-5 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+            <i class="fa-solid fa-rotate-left text-xl text-[#7be7ff]"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-3">Hesap Kurtarma Süreci</h3>
-          <p class="text-slate-400 leading-relaxed">
+          <h3 class="text-xl font-bold mb-2.5">Hesap Kurtarma Süreci</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
             Hack, erişim kaybı, spam, telif ve yanlış kısıtlama durumlarında profesyonel analiz ve doğru itiraz akışı planlaması.
           </p>
         </div>
 
-        <div class="glass rounded-[28px] p-8 premium-border hover:-translate-y-2 transition duration-300">
-          <div class="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-6 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
-            <i class="fa-solid fa-scale-balanced text-2xl text-[#7be7ff]"></i>
+        <div class="glass rounded-[24px] p-7 premium-border hover:-translate-y-2 transition duration-300">
+          <div class="w-14 h-14 rounded-xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center mb-5 shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+            <i class="fa-solid fa-scale-balanced text-xl text-[#7be7ff]"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-3">Resmî Süreç Yönlendirmesi</h3>
-          <p class="text-slate-400 leading-relaxed">
+          <h3 class="text-xl font-bold mb-2.5">Resmî Süreç Yönlendirmesi</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
             Gerekli durumlarda dilekçe, itiraz metni ve süreç yönetimi için profesyonel yönlendirme ve destek planı.
           </p>
         </div>
@@ -670,37 +670,37 @@
   </section>
 
   <!-- NASIL ÇALIŞIR -->
-  <section id="nasil" class="py-24 bg-white/[0.02] border-y border-white/8">
+  <section id="nasil" class="py-20 bg-white/[0.02] border-y border-white/8">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">PROCESS</p>
-        <h2 class="title-font text-4xl md:text-5xl font-bold">3 aşamalı profesyonel süreç</h2>
-        <p class="text-slate-400 text-lg mt-5">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">PROCESS</p>
+        <h2 class="title-font text-3xl md:text-4xl font-bold">3 aşamalı profesyonel süreç</h2>
+        <p class="text-slate-400 text-base mt-4 leading-relaxed">
           Karmaşık görünen hesabı kapatma veya erişim sorunlarını anlaşılır bir süreç haline getiriyoruz.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="section-fade glass rounded-[28px] p-8 text-center premium-border">
-          <div class="w-20 h-20 mx-auto rounded-[24px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-4xl font-extrabold shadow-lg">1</div>
-          <h4 class="text-2xl mt-7 font-bold">Durum Analizi</h4>
-          <p class="text-slate-400 mt-4 leading-relaxed">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="section-fade glass rounded-[24px] p-7 text-center premium-border">
+          <div class="w-16 h-16 mx-auto rounded-[20px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-3xl font-extrabold shadow-lg">1</div>
+          <h4 class="text-xl mt-6 font-bold">Durum Analizi</h4>
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
             Hesabın platformu, problemi ve mevcut risk durumu değerlendirilir. En uygun yol haritası belirlenir.
           </p>
         </div>
 
-        <div class="section-fade glass rounded-[28px] p-8 text-center premium-border">
-          <div class="w-20 h-20 mx-auto rounded-[24px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-4xl font-extrabold shadow-lg">2</div>
-          <h4 class="text-2xl mt-7 font-bold">Süreç Yönetimi</h4>
-          <p class="text-slate-400 mt-4 leading-relaxed">
+        <div class="section-fade glass rounded-[24px] p-7 text-center premium-border">
+          <div class="w-16 h-16 mx-auto rounded-[20px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-3xl font-extrabold shadow-lg">2</div>
+          <h4 class="text-xl mt-6 font-bold">Süreç Yönetimi</h4>
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
             İtiraz, doğrulama ve kurtarma için gerekli adımlar planlanır; sürecin takibi düzenli şekilde yapılır.
           </p>
         </div>
 
-        <div class="section-fade glass rounded-[28px] p-8 text-center premium-border">
-          <div class="w-20 h-20 mx-auto rounded-[24px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-4xl font-extrabold shadow-lg">3</div>
-          <h4 class="text-2xl mt-7 font-bold">Kalıcı Güvenlik</h4>
-          <p class="text-slate-400 mt-4 leading-relaxed">
+        <div class="section-fade glass rounded-[24px] p-7 text-center premium-border">
+          <div class="w-16 h-16 mx-auto rounded-[20px] bg-gradient-to-br from-cyan-300 to-cyan-500 text-[#05111d] flex items-center justify-center text-3xl font-extrabold shadow-lg">3</div>
+          <h4 class="text-xl mt-6 font-bold">Kalıcı Güvenlik</h4>
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
             Süreç sonrası hesabın yeniden risk yaşamaması için koruma önerileri ve güvenlik düzeni oluşturulur.
           </p>
         </div>
@@ -709,34 +709,34 @@
   </section>
 
   <!-- FİYAT -->
-  <section id="fiyat" class="py-24">
+  <section id="fiyat" class="py-20">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
-        <div class="max-w-2xl">
-          <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">PRICING</p>
-          <h2 class="title-font text-4xl md:text-5xl font-bold">Premium paket yapısı</h2>
-          <p class="text-slate-400 text-lg mt-5">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+        <div class="max-w-xl">
+          <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">PRICING</p>
+          <h2 class="title-font text-3xl md:text-4xl font-bold">Premium paket yapısı</h2>
+          <p class="text-slate-400 text-base mt-4">
             Farklı ihtiyaç seviyelerine göre net ve premium paketleme yapısı.
           </p>
         </div>
 
         <div class="inline-flex items-center bg-white/5 border border-white/10 rounded-full p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-          <button onclick="setPricing(false)" id="monthlyBtn" class="px-6 md:px-8 py-3 rounded-full font-semibold bg-white text-[#07121f] transition">Aylık</button>
-          <button onclick="setPricing(true)" id="yearlyBtn" class="px-6 md:px-8 py-3 rounded-full font-semibold text-white/80 transition">Yıllık %20</button>
+          <button onclick="setPricing(false)" id="monthlyBtn" class="px-5 md:px-7 py-2.5 rounded-full text-sm font-semibold bg-white text-[#07121f] transition">Aylık</button>
+          <button onclick="setPricing(true)" id="yearlyBtn" class="px-5 md:px-7 py-2.5 rounded-full text-sm font-semibold text-white/80 transition">Yıllık %20</button>
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-7" id="pricingCards"></div>
+      <div class="grid md:grid-cols-3 gap-6" id="pricingCards"></div>
     </div>
   </section>
 
   <!-- YORUMLAR -->
-  <section id="hikayeler" class="py-24 bg-white/[0.02] border-y border-white/8">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">REVIEWS</p>
-        <h2 class="title-font text-4xl md:text-5xl font-bold">Müşteri deneyimleri</h2>
-        <p class="text-slate-400 text-lg mt-5">
+  <section id="hikayeler" class="py-20 bg-white/[0.02] border-y border-white/8">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">REVIEWS</p>
+        <h2 class="title-font text-3xl md:text-4xl font-bold">Müşteri deneyimleri</h2>
+        <p class="text-slate-400 text-base mt-4">
           Süreç yaklaşımımızı en iyi anlatan şey, kullanıcı deneyimidir.
         </p>
       </div>
@@ -748,61 +748,61 @@
   </section>
 
   <!-- PLATFORM -->
-  <section id="platformlar" class="py-24">
+  <section id="platformlar" class="py-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">PLATFORMS</p>
-      <h2 class="title-font text-4xl md:text-5xl font-bold mb-5">Desteklenen platformlar</h2>
-      <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-14">
+      <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">PLATFORMS</p>
+      <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">Desteklenen platformlar</h2>
+      <p class="text-slate-400 text-base max-w-xl mx-auto mb-12">
         Farklı platformlardaki hesap problemlerine uygun süreç planlaması.
       </p>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-5">
-        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-instagram text-4xl"></i></div>
-        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-facebook text-4xl"></i></div>
-        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-tiktok text-4xl"></i></div>
-        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-x-twitter text-4xl"></i></div>
-        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-linkedin text-4xl"></i></div>
-        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-youtube text-4xl"></i></div>
-        <div class="glass-soft rounded-3xl p-7 platform-icon opacity-75"><i class="fa-brands fa-whatsapp text-4xl"></i></div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-4">
+        <div class="glass-soft rounded-2xl p-6 platform-icon opacity-75"><i class="fa-brands fa-instagram text-3xl"></i></div>
+        <div class="glass-soft rounded-2xl p-6 platform-icon opacity-75"><i class="fa-brands fa-facebook text-3xl"></i></div>
+        <div class="glass-soft rounded-2xl p-6 platform-icon opacity-75"><i class="fa-brands fa-tiktok text-3xl"></i></div>
+        <div class="glass-soft rounded-2xl p-6 platform-icon opacity-75"><i class="fa-brands fa-x-twitter text-3xl"></i></div>
+        <div class="glass-soft rounded-2xl p-6 platform-icon opacity-75"><i class="fa-brands fa-linkedin text-3xl"></i></div>
+        <div class="glass-soft rounded-2xl p-6 platform-icon opacity-75"><i class="fa-brands fa-youtube text-3xl"></i></div>
+        <div class="glass-soft rounded-2xl p-6 platform-icon opacity-75"><i class="fa-brands fa-whatsapp text-3xl"></i></div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="sss" class="py-24 bg-white/[0.02] border-y border-white/8">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">FAQ</p>
-        <h2 class="title-font text-4xl md:text-5xl font-bold">Sık sorulan sorular</h2>
+  <section id="sss" class="py-20 bg-white/[0.02] border-y border-white/8">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">FAQ</p>
+        <h2 class="title-font text-3xl md:text-4xl font-bold">Sık sorulan sorular</h2>
       </div>
 
-      <div class="space-y-4">
-        <details class="faq-item glass rounded-3xl p-6">
-          <summary class="cursor-pointer flex items-center justify-between font-semibold text-lg">
+      <div class="space-y-3">
+        <details class="faq-item glass rounded-2xl p-5">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-base">
             Hangi platformlarda destek veriyorsunuz?
-            <i class="fa-solid fa-plus text-cyan-300"></i>
+            <i class="fa-solid fa-plus text-cyan-300 text-sm"></i>
           </summary>
-          <p class="text-slate-400 mt-4 leading-relaxed">
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
             Instagram, TikTok, X, LinkedIn, YouTube ve WhatsApp dahil çoklu platform senaryolarında ön değerlendirme ve süreç planlaması yapıyoruz.
           </p>
         </details>
 
-        <details class="faq-item glass rounded-3xl p-6">
-          <summary class="cursor-pointer flex items-center justify-between font-semibold text-lg">
+        <details class="faq-item glass rounded-2xl p-5">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-base">
             Süreç neye göre değişiyor?
-            <i class="fa-solid fa-plus text-cyan-300"></i>
+            <i class="fa-solid fa-plus text-cyan-300 text-sm"></i>
           </summary>
-          <p class="text-slate-400 mt-4 leading-relaxed">
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
             Sorunun türü, platform, hesabın durumu ve doğrulama seviyesi gibi faktörler sürecin uzunluğunu ve yöntemini belirler.
           </p>
         </details>
 
-        <details class="faq-item glass rounded-3xl p-6">
-          <summary class="cursor-pointer flex items-center justify-between font-semibold text-lg">
+        <details class="faq-item glass rounded-2xl p-5">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-base">
             İlk aşamada ne yapmam gerekiyor?
-            <i class="fa-solid fa-plus text-cyan-300"></i>
+            <i class="fa-solid fa-plus text-cyan-300 text-sm"></i>
           </summary>
-          <p class="text-slate-400 mt-4 leading-relaxed">
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
             Öncelikle hesap türünüzü ve yaşadığınız problemi paylaşmanız yeterli. Ardından size uygun ilk analiz ve yönlendirme yapılır.
           </p>
         </details>
@@ -811,29 +811,29 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-24">
+  <section class="py-20">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="relative glass rounded-[36px] p-10 md:p-14 premium-border overflow-hidden">
-        <div class="absolute -top-10 -right-10 w-48 h-48 bg-cyan-400/10 blur-3xl rounded-full"></div>
-        <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-cyan-400/10 blur-3xl rounded-full"></div>
+      <div class="relative glass rounded-[32px] p-9 md:p-12 premium-border overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-44 h-44 bg-cyan-400/10 blur-3xl rounded-full"></div>
+        <div class="absolute -bottom-10 -left-10 w-44 h-44 bg-cyan-400/10 blur-3xl rounded-full"></div>
 
-        <div class="relative flex flex-col lg:flex-row gap-8 lg:items-center lg:justify-between">
-          <div class="max-w-2xl">
-            <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-4">GET STARTED</p>
-            <h3 class="title-font text-3xl md:text-5xl font-bold leading-tight">
+        <div class="relative flex flex-col lg:flex-row gap-7 lg:items-center lg:justify-between">
+          <div class="max-w-xl">
+            <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">GET STARTED</p>
+            <h3 class="title-font text-2xl md:text-4xl font-bold leading-tight">
               Hesabınız için profesyonel bir ön analiz alın.
             </h3>
-            <p class="text-slate-400 text-lg mt-5">
+            <p class="text-slate-400 text-base mt-4">
               Kısa bir ön değerlendirme ile size en doğru yol haritasını çıkaralım.
             </p>
           </div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <button onclick="showModal()" class="btn-primary px-8 py-4 rounded-2xl font-bold transition inline-flex items-center justify-center gap-3">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button onclick="showModal()" class="btn-primary px-7 py-3.5 rounded-xl font-bold text-sm transition inline-flex items-center justify-center gap-2.5">
               <i class="fa-solid fa-rocket"></i>
               Analizi Başlat
             </button>
-            <a href="https://wa.me/905551234567" target="_blank" class="btn-dark px-8 py-4 rounded-2xl font-semibold transition inline-flex items-center justify-center gap-3">
+            <a href="https://wa.me/905551234567" target="_blank" class="btn-dark px-7 py-3.5 rounded-xl font-semibold text-sm transition inline-flex items-center justify-center gap-2.5">
               <i class="fa-brands fa-whatsapp text-green-400"></i>
               WhatsApp
             </a>
@@ -845,27 +845,27 @@
 
   <!-- FOOTER -->
   <footer class="border-t border-white/8 bg-black/30">
-    <div class="max-w-7xl mx-auto px-6 py-14">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
         <div>
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center shadow-[0_12px_30px_rgba(0,212,255,0.10)]">
-              <i class="fa-solid fa-shield-halved text-xl text-[#7be7ff]"></i>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl glass flex items-center justify-center shadow-[0_12px_30px_rgba(0,212,255,0.10)]">
+              <i class="fa-solid fa-shield-halved text-base text-[#7be7ff]"></i>
             </div>
             <div>
-              <h4 class="title-font text-2xl font-bold">Hesap Koruma</h4>
-              <p class="text-xs uppercase tracking-[0.25em] text-cyan-200/60">Premium Digital Protection</p>
+              <h4 class="title-font text-xl font-bold">Hesap Koruma</h4>
+              <p class="text-[10px] uppercase tracking-[0.22em] text-cyan-200/60">Premium Digital Protection</p>
             </div>
           </div>
-          <p class="text-slate-400 max-w-xl leading-relaxed">
+          <p class="text-slate-400 text-sm max-w-md leading-relaxed">
             Sosyal medya hesap güvenliği, ön değerlendirme, kurtarma planlaması ve süreç yönetimi için premium görünümde profesyonel hizmet sunumu.
           </p>
         </div>
 
-        <div class="text-slate-500 text-sm md:text-right">
+        <div class="text-slate-500 text-xs md:text-right">
           <p>© 2026 Hesap Koruma</p>
-          <p class="mt-2">www.hesapkoruma.com</p>
-          <p class="mt-2">KVKK uyumlu yapı • Tüm hakları saklıdır</p>
+          <p class="mt-1.5">www.hesapkoruma.com</p>
+          <p class="mt-1.5">KVKK uyumlu yapı · Tüm hakları saklıdır</p>
         </div>
       </div>
     </div>
@@ -873,25 +873,25 @@
 
   <!-- MODAL -->
   <div id="modal" class="hidden fixed inset-0 bg-black/75 backdrop-blur-sm items-center justify-center z-[9999] px-4">
-    <div class="glass premium-border max-w-lg w-full rounded-[32px] p-8 md:p-10">
+    <div class="glass premium-border max-w-md w-full rounded-[28px] p-7 md:p-9">
       <div class="flex items-start justify-between gap-4">
         <div>
-          <p class="text-cyan-300 uppercase tracking-[0.28em] text-xs mb-3">FREE ANALYSIS</p>
-          <h3 class="text-3xl font-bold">Ücretsiz Hesap Analizi</h3>
+          <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-2">FREE ANALYSIS</p>
+          <h3 class="text-2xl font-bold">Ücretsiz Hesap Analizi</h3>
         </div>
-        <button onclick="hideModal()" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-          <i class="fa-solid fa-xmark"></i>
+        <button onclick="hideModal()" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+          <i class="fa-solid fa-xmark text-sm"></i>
         </button>
       </div>
 
-      <p class="text-slate-400 mt-4">
+      <p class="text-slate-400 text-sm mt-3">
         Kısa bilgilerinizi bırakın, durumunuza uygun ilk değerlendirmeyi oluşturalım.
       </p>
 
-      <form onsubmit="submitForm(event)" class="space-y-4 mt-8">
-        <input type="text" placeholder="Ad Soyad" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500">
-        <input type="email" placeholder="E-posta" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500">
-        <select class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white">
+      <form onsubmit="submitForm(event)" class="space-y-3 mt-6">
+        <input type="text" placeholder="Ad Soyad" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500">
+        <input type="email" placeholder="E-posta" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500">
+        <select class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm outline-none focus:border-cyan-300/40 text-white">
           <option class="text-black">Instagram</option>
           <option class="text-black">TikTok</option>
           <option class="text-black">X (Twitter)</option>
@@ -899,9 +899,9 @@
           <option class="text-black">YouTube</option>
           <option class="text-black">Diğer</option>
         </select>
-        <textarea rows="4" placeholder="Kısaca yaşadığınız problemi yazın" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500 resize-none"></textarea>
+        <textarea rows="3" placeholder="Kısaca yaşadığınız problemi yazın" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm outline-none focus:border-cyan-300/40 text-white placeholder:text-slate-500 resize-none"></textarea>
 
-        <button type="submit" class="w-full btn-primary py-4 rounded-2xl font-bold transition">
+        <button type="submit" class="w-full btn-primary py-3.5 rounded-xl text-sm font-bold transition">
           Analizi Başlat
         </button>
       </form>
@@ -1002,41 +1002,41 @@
 
         const card = document.createElement('div');
         card.className = `
-          pricing-card glass rounded-[32px] p-8 premium-border relative overflow-hidden
+          pricing-card glass rounded-[24px] p-7 premium-border relative overflow-hidden
           ${plan.featured ? 'featured' : ''}
         `;
 
         card.innerHTML = `
-          <div class="flex items-center justify-between gap-4 mb-8">
+          <div class="flex items-center justify-between gap-3 mb-7">
             <div>
-              <div class="inline-flex px-3 py-1 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-cyan-200 mb-4">
+              <div class="inline-flex px-2.5 py-1 rounded-full text-[11px] font-semibold border border-white/10 bg-white/5 text-cyan-200 mb-3">
                 ${plan.badge}
               </div>
-              <h3 class="text-2xl font-bold">${plan.name}</h3>
+              <h3 class="text-xl font-bold">${plan.name}</h3>
             </div>
             ${plan.featured ? `
-              <div class="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-300/25 flex items-center justify-center shadow-[0_12px_26px_rgba(0,212,255,0.10)]">
-                <i class="fa-solid fa-crown text-[#7be7ff]"></i>
+              <div class="w-11 h-11 rounded-xl bg-cyan-400/10 border border-cyan-300/25 flex items-center justify-center shadow-[0_12px_26px_rgba(0,212,255,0.10)]">
+                <i class="fa-solid fa-crown text-[#7be7ff] text-sm"></i>
               </div>` : ''}
           </div>
 
-          <div class="mb-8">
-            <div class="text-5xl md:text-6xl font-bold text-white tracking-tight">
-              ${formatPrice(price)} <span class="text-xl text-slate-400 font-medium">₺</span>
+          <div class="mb-7">
+            <div class="text-4xl md:text-5xl font-bold text-white tracking-tight">
+              ${formatPrice(price)} <span class="text-lg text-slate-400 font-medium">₺</span>
             </div>
-            <p class="text-slate-400 mt-2">${isYearly ? 'yıllık ödeme' : 'aylık ödeme'}</p>
+            <p class="text-slate-400 text-sm mt-1.5">${isYearly ? 'yıllık ödeme' : 'aylık ödeme'}</p>
           </div>
 
-          <div class="space-y-4 mb-8">
+          <div class="space-y-3 mb-7">
             ${plan.features.map(feature => `
-              <div class="flex items-center gap-3 text-slate-300">
-                <i class="fa-solid fa-check text-cyan-300"></i>
+              <div class="flex items-center gap-2.5 text-sm text-slate-300">
+                <i class="fa-solid fa-check text-cyan-300 text-xs"></i>
                 <span>${feature}</span>
               </div>
             `).join('')}
           </div>
 
-          <button onclick="showModal()" class="${plan.featured ? 'btn-primary text-[#06111f]' : 'btn-dark text-white'} w-full py-4 rounded-2xl font-bold transition">
+          <button onclick="showModal()" class="${plan.featured ? 'btn-primary text-[#06111f]' : 'btn-dark text-white'} w-full py-3.5 rounded-xl text-sm font-bold transition">
             Teklif Al
           </button>
         `;
@@ -1091,18 +1091,18 @@
       const container = document.getElementById('slides');
       container.innerHTML = testimonials.map(t => `
         <div class="min-w-full px-1">
-          <div class="glass rounded-[32px] p-8 md:p-10 premium-border">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
+          <div class="glass rounded-[24px] p-7 md:p-9 premium-border">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center shadow-[0_10px_24px_rgba(0,212,255,0.08)]">
                 <i class="fa-solid fa-user-shield text-[#7be7ff]"></i>
               </div>
               <div>
-                <p class="font-bold text-lg">${t.name}</p>
-                <p class="text-sm text-slate-400">${t.role} • ${t.platform}</p>
+                <p class="font-bold">${t.name}</p>
+                <p class="text-xs text-slate-400 mt-0.5">${t.role} · ${t.platform}</p>
               </div>
             </div>
-            <p class="text-xl md:text-2xl leading-relaxed text-slate-100">
-              “${t.text}”
+            <p class="text-lg md:text-xl leading-relaxed text-slate-100">
+              "${t.text}"
             </p>
           </div>
         </div>
@@ -1145,7 +1145,7 @@
       for (let i = 0; i < count; i++) {
         const p = document.createElement('span');
         p.className = 'particle';
-        const size = Math.random() * 10 + 4;
+        const size = Math.random() * 8 + 3;
         p.style.width = `${size}px`;
         p.style.height = `${size}px`;
         p.style.left = `${Math.random() * 100}%`;
