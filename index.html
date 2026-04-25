@@ -413,6 +413,15 @@
       z-index: 99999;
     }
 
+    /* Footer link hover */
+    .footer-link {
+      transition: color 0.22s ease, padding-left 0.22s ease;
+    }
+    .footer-link:hover {
+      color: #7be7ff;
+      padding-left: 4px;
+    }
+
     @media (max-width: 1024px) {
       .pricing-card.featured {
         transform: none;
@@ -1015,9 +1024,13 @@
 
   <!-- FOOTER -->
   <footer class="border-t border-white/8 bg-black/30">
-    <div class="max-w-7xl mx-auto px-6 py-12">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-        <div>
+    <div class="max-w-7xl mx-auto px-6 pt-14 pb-8">
+
+      <!-- Üst: Logo + 3 Kolon -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+
+        <!-- Marka -->
+        <div class="lg:col-span-1">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 rounded-xl glass flex items-center justify-center shadow-[0_12px_30px_rgba(0,212,255,0.10)]">
               <i class="fa-solid fa-shield-halved text-base text-[#7be7ff]"></i>
@@ -1027,17 +1040,190 @@
               <p class="text-[10px] uppercase tracking-[0.22em] text-cyan-200/60">Premium Digital Protection</p>
             </div>
           </div>
-          <p class="text-slate-400 text-sm max-w-md leading-relaxed">
-            Sosyal medya hesap güvenliği, ön değerlendirme, kurtarma planlaması ve süreç yönetimi için premium görünümde profesyonel hizmet sunumu.
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">
+            Sosyal medya hesap güvenliği, ön değerlendirme, kurtarma planlaması ve süreç yönetimi için profesyonel hizmet sunumu.
           </p>
+          <div class="flex items-center gap-2.5">
+            <a href="https://wa.me/905551234567" target="_blank"
+               class="w-9 h-9 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-green-400 transition">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-[#7be7ff] transition">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-[#7be7ff] transition">
+              <i class="fa-brands fa-x-twitter text-sm"></i>
+            </a>
+          </div>
         </div>
 
-        <div class="text-slate-500 text-xs md:text-right">
-          <p>© 2026 Hesap Koruma</p>
-          <p class="mt-1.5">www.hesapkoruma.com</p>
-          <p class="mt-1.5">KVKK uyumlu yapı · Tüm hakları saklıdır</p>
+        <!-- Kolon 1: Hizmetler -->
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.28em] text-cyan-300 mb-5">Hizmetler</p>
+          <ul class="space-y-3">
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-brands fa-instagram text-[11px] text-cyan-400/60"></i>
+                Instagram Hesap Kurtarma
+              </a>
+            </li>
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-brands fa-tiktok text-[11px] text-cyan-400/60"></i>
+                TikTok Video Kaldırma
+              </a>
+            </li>
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-brands fa-x-twitter text-[11px] text-cyan-400/60"></i>
+                X (Twitter) Hesap Kurtarma
+              </a>
+            </li>
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-brands fa-youtube text-[11px] text-cyan-400/60"></i>
+                YouTube İçerik Kaldırma
+              </a>
+            </li>
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-brands fa-whatsapp text-[11px] text-cyan-400/60"></i>
+                WhatsApp Numara Açma
+              </a>
+            </li>
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-brands fa-google text-[11px] text-cyan-400/60"></i>
+                Google Haber Kaldırma
+              </a>
+            </li>
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-earth-europe text-[11px] text-cyan-400/60"></i>
+                İnternetten İçerik Silme
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kolon 2: Hızlı Erişim -->
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.28em] text-cyan-300 mb-5">Hızlı Erişim</p>
+          <ul class="space-y-3">
+            <li>
+              <a href="#hizmetler" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-chevron-right text-[9px] text-cyan-400/60"></i>
+                Hizmetlerimiz
+              </a>
+            </li>
+            <li>
+              <a href="#nasil" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-chevron-right text-[9px] text-cyan-400/60"></i>
+                Süreç Nasıl İşler?
+              </a>
+            </li>
+            <li>
+              <a href="#sunuyoruz" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-chevron-right text-[9px] text-cyan-400/60"></i>
+                Neler Sunuyoruz?
+              </a>
+            </li>
+            <li>
+              <a href="#fiyat" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-chevron-right text-[9px] text-cyan-400/60"></i>
+                Paket &amp; Fiyatlar
+              </a>
+            </li>
+            <li>
+              <a href="#hikayeler" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-chevron-right text-[9px] text-cyan-400/60"></i>
+                Müşteri Yorumları
+              </a>
+            </li>
+            <li>
+              <a href="#platformlar" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-chevron-right text-[9px] text-cyan-400/60"></i>
+                Desteklenen Platformlar
+              </a>
+            </li>
+            <li>
+              <a href="#sss" class="footer-link flex items-center gap-2.5 text-sm text-slate-400 hover:text-[#7be7ff]">
+                <i class="fa-solid fa-chevron-right text-[9px] text-cyan-400/60"></i>
+                Sık Sorulan Sorular
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kolon 3: İletişim -->
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.28em] text-cyan-300 mb-5">İletişim</p>
+          <ul class="space-y-4">
+            <li>
+              <a href="https://wa.me/905551234567" target="_blank"
+                 class="footer-link flex items-start gap-3 text-sm text-slate-400 hover:text-[#7be7ff] group">
+                <span class="w-8 h-8 rounded-lg bg-green-500/10 border border-green-400/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-green-500/20 transition">
+                  <i class="fa-brands fa-whatsapp text-green-400 text-sm"></i>
+                </span>
+                <span>
+                  <span class="block text-white/80 font-medium text-xs mb-0.5">WhatsApp</span>
+                  +90 555 123 45 67
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@hesapkoruma.com"
+                 class="footer-link flex items-start gap-3 text-sm text-slate-400 hover:text-[#7be7ff] group">
+                <span class="w-8 h-8 rounded-lg bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-cyan-400/18 transition">
+                  <i class="fa-solid fa-envelope text-[#7be7ff] text-sm"></i>
+                </span>
+                <span>
+                  <span class="block text-white/80 font-medium text-xs mb-0.5">E-posta</span>
+                  info@hesapkoruma.com
+                </span>
+              </a>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-400">
+              <span class="w-8 h-8 rounded-lg bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-clock text-[#7be7ff] text-sm"></i>
+              </span>
+              <span>
+                <span class="block text-white/80 font-medium text-xs mb-0.5">Çalışma Saatleri</span>
+                7/24 aktif destek
+              </span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-400">
+              <span class="w-8 h-8 rounded-lg bg-cyan-400/10 border border-cyan-300/20 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-globe text-[#7be7ff] text-sm"></i>
+              </span>
+              <span>
+                <span class="block text-white/80 font-medium text-xs mb-0.5">Web</span>
+                www.hesapkoruma.com
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Ayırıcı çizgi -->
+      <div class="soft-divider mb-6"></div>
+
+      <!-- Alt: Telif + KVKK -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+        <p>© 2026 Hesap Koruma · Tüm hakları saklıdır.</p>
+        <div class="flex items-center gap-4">
+          <span class="inline-flex items-center gap-1.5">
+            <i class="fa-solid fa-shield-halved text-cyan-400/60 text-[10px]"></i>
+            KVKK Uyumlu Yapı
+          </span>
+          <span class="text-white/10">|</span>
+          <a href="#" class="hover:text-slate-300 transition">Gizlilik Politikası</a>
+          <span class="text-white/10">|</span>
+          <a href="#" class="hover:text-slate-300 transition">Kullanım Koşulları</a>
         </div>
       </div>
+
     </div>
   </footer>
 
