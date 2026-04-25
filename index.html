@@ -636,7 +636,9 @@
   <!-- HİZMETLER -->
   <section id="hizmetler" class="py-20">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="max-w-2xl mb-12">
+
+      <!-- ✦ Ortalanmış header — Process ile aynı format -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
         <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">SERVICES</p>
         <h2 class="title-font text-3xl md:text-4xl font-bold tracking-tight">Premium hizmet yapısı</h2>
         <p class="text-slate-400 text-base mt-4 leading-relaxed">
@@ -888,15 +890,18 @@
   <!-- FİYAT -->
   <section id="fiyat" class="py-20">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-        <div class="max-w-xl">
-          <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">PRICING</p>
-          <h2 class="title-font text-3xl md:text-4xl font-bold">Premium paket yapısı</h2>
-          <p class="text-slate-400 text-base mt-4">
-            Farklı ihtiyaç seviyelerine göre net ve premium paketleme yapısı.
-          </p>
-        </div>
 
+      <!-- ✦ Ortalanmış header — Process ile aynı format -->
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <p class="text-cyan-300 uppercase tracking-[0.28em] text-[10px] mb-3">PRICING</p>
+        <h2 class="title-font text-3xl md:text-4xl font-bold">Premium paket yapısı</h2>
+        <p class="text-slate-400 text-base mt-4">
+          Farklı ihtiyaç seviyelerine göre net ve premium paketleme yapısı.
+        </p>
+      </div>
+
+      <!-- Toggle: ortalı, header altında -->
+      <div class="flex justify-center mb-12">
         <div class="inline-flex items-center bg-white/5 border border-white/10 rounded-full p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
           <button onclick="setPricing(false)" id="monthlyBtn" class="px-5 md:px-7 py-2.5 rounded-full text-sm font-semibold bg-white text-[#07121f] transition">Aylık</button>
           <button onclick="setPricing(true)" id="yearlyBtn" class="px-5 md:px-7 py-2.5 rounded-full text-sm font-semibold text-white/80 transition">Yıllık %20</button>
